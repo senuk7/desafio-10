@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNews Today - Portal de Tecnologia</title>
+
+</head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #080b2b;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.cabecalho {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    text-align: center;
+    padding: 38px;
+    background: linear-gradient(110deg, #111338, #21102d);
+    border-bottom: 1px solid #292b50;
+}
+
+.logo {
+    font-size: 36px;
+    background: linear-gradient(90deg, #8b3dcc, #c03fc9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.tagline {
+    color: #9da0b8;
+    margin-top: 10px;
+}
+
+.conteudo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    max-width: 810px;
+    margin: 42px auto;
+    padding: 0 10px;
+}
+
+.artigo-destaque {
+    grid-column: 1 / 3;
+    padding: 34px;
+    border-radius: 20px;
+    background: rgba(65, 78, 100, 0.7);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.artigo-destaque h2 {
+    color: #5da4ff;
+    margin-bottom: 12px;
+}
+
+.data {
+    color: #65728f;
+    font-size: 14px;
+}
+
+.leia-mais {
+    margin-top: 18px;
+}
+
+.leia-mais summary {
+    color: #ffad00;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.secao-video {
+    text-align: center;
+    grid-column: 1;
+}
+
+.secao-video h3 {
+    margin-bottom: 18px;
+}
+
+.video-embed {
+    width: 390px;
+    max-width: 100%;
+    border: 2px solid #6d4dff;
+    border-radius: 15px;
+}
+
+.secao-newsletter {
+    grid-column: 2;
+    padding: 28px 32px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #6548e8, #8147e8);
+    min-height: 300px;
+}
+
+.secao-newsletter h3 {
+    margin-bottom: 12px;
+}
+
+.form-newsletter {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-newsletter input,
+.form-newsletter select {
+    padding: 10px;
+    margin: 8px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+
+.form-newsletter select option {
+    background: #6548e8;
+    color: #fff;
+}
+
+.checkbox-container {
+    margin: 10px 0 18px;
+}
+
+.btn-inscrever {
+    padding: 12px;
+    border: 0;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ffad00, #ed3045);
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.rodape {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    border-top: 1px solid #292b50;
+    color: #9da0b8;
+}
+
+.rodape a {
+    color: #6bb8ff;
+}
+
+@media (max-width: 767px) {
+    .conteudo {
+        grid-template-columns: 1fr;
+        margin: 25px auto;
+    }
+
+    .artigo-destaque,
+    .secao-video,
+    .secao-newsletter {
+        grid-column: 1;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .cabecalho {
+        padding: 25px 15px;
+    }
+}
+</style>
+
+<body>
+
+    <header class="cabecalho">
+        <h1 class="logo">💻 TechNews Today</h1>
+
+        <p class="tagline">
+            As <strong>últimas novidades</strong> do mundo <em>tech</em>
+        </p>
+    </header>
+
+    <main class="conteudo">
+
+        <article class="artigo-destaque">
+            <h2>🚀 IA Revoluciona Desenvolvimento</h2>
+
+            <time datetime="2025-08-07" class="data">
+                7 de Agosto, 2025
+            </time>
+
+            <p>
+                Inteligência artificial está transformando como criamos software...
+            </p>
+
+            <details class="leia-mais">
+                <summary>Leia mais &rarr;</summary>
+
+                <p>
+                    ChatGPT e outras ferramentas estão mudando o cenário tech mundial.
+                </p>
+            </details>
+        </article>
+
+        <section class="secao-video">
+
+            <h3>🎬 Tech em Vídeo</h3>
+
+            <iframe
+                class="video-embed"
+                width="300"
+                height="200"
+                src="https://www.youtube.com/embed/eqUFcr1mI3Y"
+                title="Tech News Video">
+            </iframe>
+
+        </section>
+
+        <section class="secao-newsletter">
+
+            <h3>📩 Newsletter</h3>
+
+            <form
+                action="subscribe.php"
+                method="post"
+                class="form-newsletter">
+
+                <label for="email">Email:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required>
+
+                <label for="interesse">
+                    Área de Interesse:
+                </label>
+
+                <select
+                    id="interesse"
+                    name="interesse">
+
+                    <option value="ia">
+                        Inteligência Artificial
+                    </option>
+
+                    <option value="mobile">
+                        Desenvolvimento Mobile
+                    </option>
+
+                    <option value="web">
+                        Tecnologias Web
+                    </option>
+
+                </select>
+
+                <div class="checkbox-container">
+
+                    <input
+                        type="checkbox"
+                        id="aceito"
+                        name="aceito"
+                        required>
+
+                    <label for="aceito">
+                        Aceito os termos
+                    </label>
+
+                </div>
+
+                <button
+                    type="submit"
+                    class="btn-inscrever">
+                    Inscrever-se
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <footer class="rodape">
+
+        <p>
+            &copy; 2025 TechNews Today
+            &bull;
+            Todos os direitos reservados
+        </p>
+
+        <address>
+            Contato:
+            <a href="mailto:info@technews.com">
+                info@technews.com
+            </a>
+        </address>
+
+    </footer>
+
+</body>
+
+</html>

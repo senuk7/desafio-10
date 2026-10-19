@@ -1,0 +1,154 @@
+/* Reset de estilos básicas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #111827;
+  color: #e5e7eb;
+  line-height: 1.5;
+}
+
+/* Header com glassmorphism */
+.header {
+  background: linear-gradient(135deg, rgba(31, 41, 55, 0.7), rgba(17, 24, 39, 0.7));
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 28px;
+  background: linear-gradient(45deg, #3b82f6, #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.tagline {
+  color: #9ca3af;
+  margin-top: 5px;
+}
+
+/* Layout principal (Grid) */
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+/* Artigo em destaque */
+.artigo-destaque {
+  background: linear-gradient(135deg, #1f2937, #111827);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s;
+}
+
+.artigo-destaque:hover {
+  transform: translateY(-5px);
+}
+
+.categoria-badge {
+  color: #ec4899;
+  margin-bottom: 10px;
+}
+
+.data {
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.btn-mais {
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.lista-vazia-mensagem {
+  color: #9ca3af;
+  text-align: center;
+}
+
+/* Seção de vídeo */
+.secao-video {
+  text-align: center;
+}
+
+.video-container {
+  border-radius: 12px;
+  border: 1px solid #3b82f6;
+  margin-top: 15px;
+}
+
+/* Newsletter com gradiente */
+.secao-newsletter {
+  background: linear-gradient(135deg, #1e3a8a, #312e81);
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.form-newsletter input,
+.form-newsletter select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #ffffff;
+}
+
+.checkbox-container {
+  margin-top: 10px;
+}
+
+.btn-inscrever {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #ec4899, #8b5cf6);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.btn-inscrever:hover {
+  transform: scale(1.02);
+}
+
+/* Rodapé estilizado */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #9ca3af;
+}
+
+footer a {
+  color: #3b82f6;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .conteudo {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .artigo-destaque {
+    grid-column: span 2;
+  }
+}
